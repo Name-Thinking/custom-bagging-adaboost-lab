@@ -1,0 +1,12 @@
+=== Ensemble Learning Lab (Iris 80/20 Split) ===
+Dataset Source   : Hugging Face datasets (scikit-learn/iris)
+Shape            : 150 rows x 4 features
+CPU Cores        : 12
+n_estimators     : 500 | random_state: 42 | timing: median of 5 runs
+Joblib Pool Warm : 4.5915 s across 12 worker processes (one-time Windows spawn excluded from fit timing)
+
+| Model                              |   Estimators | Accuracy   |   Training Time (s) |   Inference Time (s) |
+|------------------------------------|--------------|------------|---------------------|----------------------|
+| Single DecisionTree                |            1 | 93.33%     |            0.001835 |             0.000275 |
+| Custom Bagging (Parallel)          |          500 | 96.67%     |            0.290992 |             0.096874 |
+| Custom AdaBoost SAMME (Sequential) |          500 | 93.33%     |            1.09395  |             0.10927  |
